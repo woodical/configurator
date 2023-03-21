@@ -1,0 +1,6 @@
+mkv.generic.profile_name = dev
+mkv.generic.project_name = Project1
+mkv.generic.log.dir = /tmp/logs
+mkv.generic.log.file = mylog.txt
+
+mkv.dyn_sub_algo.topic = BIG/DATA
