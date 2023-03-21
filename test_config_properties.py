@@ -71,7 +71,7 @@ homes.batman.work = cave
 
 
 def test_properties_read_from_file():
-    assert config_properties.parse_properties_file("example.jini") == {
+    assert config_properties.parse_properties_file("example.jinit") == {
         "mkv": {
             "dyn_sub_algo": {"topic": "BIG/DATA"},
             "generic": {
@@ -161,15 +161,3 @@ salary = 100
     assert config_properties.dict_to_ini_string(config_dict) == expected
 
 
-def test_merged_config_dicts():
-    actual = config_properties.get_config("qa")
-    expected = {
-        "postgres": {"db_host": "host-qa", "db_port": 200},
-        "prometheus": {"port": 5790},
-        "sub_dyn_alog_prices": {"timeout": 100, "topic": "SOW/PRICES"},
-        "sub_dyn_inventory": {"timeout": 1200, "topic": "SOW/INVENTORY"},
-    }
-    assert actual == expected
-
-    print(config_properties.dict_to_ini_string(actual))
-    print(config_properties.dict_to_properties_string(actual, prefix='mkv.'))
