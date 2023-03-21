@@ -79,7 +79,7 @@ def test_properties_read_from_file():
                     "dir": "/tmp/logs",
                     "file": "mylog.txt",
                 },
-                "profile_name": "dev",
+                "profile_name": "qa",
                 "project_name": "Project1",
             },
         }
@@ -159,5 +159,3 @@ salary = 100
 
 """
     assert config_properties.dict_to_ini_string(config_dict) == expected
-
-
